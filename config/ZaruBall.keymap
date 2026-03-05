@@ -142,11 +142,11 @@
             display-name = "Lower";
             sensor-bindings = <&inc_dec_kp RIGHT LEFT>;
             bindings = <
-&trans  &kp F1   &kp F2     &kp F3    &kp F4     &kp F5                           &kp F6        &kp F7      &kp F8      &kp F9         &kp KP_SLASH     &kp KP_NUMLOCK
-&trans  &kp F6   &kp F7     &kp F8    &kp F9     &kp F10                          &kp KP_N7     &kp KP_N4   &kp KP_N5   &kp KP_N6      &kp KP_MULTIPLY  &none
-&trans  &kp F11  &kp F12    &kp UP    &none      &kp HOME  &kp PG_UP  &kp KP_N4   &kp KP_N5     &kp KP_N1   &kp KP_N2   &kp KP_N3      &kp KP_MINUS     &none
-&trans  &none    &kp LEFT   &kp DOWN  &kp RIGHT  &kp END   &kp PG_DN  &kp KP_N1   &kp KP_N2     &kp KP_N3   &kp KP_N0   &kp KP_EQUAL   &kp KP_PLUS      &none
-&trans           &kp RSHFT  &trans    &trans     &trans    &trans     &trans      &kp DEL                                                               &studio_unlock
+&trans  &kp F1   &kp F2     &kp F3    &kp F4     &kp F5               &kp F6     &kp F7     &kp F8     &kp F9     &kp KP_SLASH     &kp KP_NUMLOCK
+&trans  &kp F6   &kp F7     &kp F8    &kp F9     &kp F10              &kp KP_N7  &kp KP_N4  &kp KP_N5  &kp KP_N6  &kp KP_MULTIPLY  &none
+&trans  &kp F11  &kp F12    &kp UP    &none      &kp HOME  &kp PG_UP  &none      &kp KP_N4  &kp KP_N1  &kp KP_N2  &kp KP_N3        &kp KP_MINUS    &none
+&trans  &none    &kp LEFT   &kp DOWN  &kp RIGHT  &kp END   &kp PG_DN  &kp KP_N1  &kp KP_N2  &kp KP_N3  &kp KP_N0  &kp KP_EQUAL     &kp KP_PLUS     &none
+&trans           &kp RSHFT  &trans    &trans     &trans    &trans     &trans     &kp DEL                                           &studio_unlock
             >;
         };
 
@@ -154,11 +154,11 @@
             display-name = "Raise";
             sensor-bindings = <&inc_dec_kp LA(F2) LA(F1)>;
             bindings = <
-&trans  &none  &none  &none      &none      &none                            &none      &none     &none     &none     &none      &none
-&trans  &none  &none  &none      &none      &none                            &none      &none     &none     &kp UP    &none      &none
-&trans  &none  &none  &none      &none      &none           &none            &none      &kp HOME  &kp LEFT  &kp DOWN  &kp RIGHT  &kp END &none
-&trans  &none  &none  &none      &none      &none           &none            &none      &none     &none     &none     &none      &none   &none
-&trans         &none  &trans     &trans     &trans          &trans           &kp DEL    &none                                    &trans
+&trans  &none  &none  &none   &none   &none           &none    &none     &none     &none     &none      &none
+&trans  &none  &none  &none   &none   &none           &none    &none     &none     &kp UP    &none      &none
+&trans  &none  &none  &none   &none   &none   &none   &none    &kp HOME  &kp LEFT  &kp DOWN  &kp RIGHT  &kp END  &none
+&trans  &none  &none  &none   &none   &none   &none   &none    &none     &none     &none     &none      &none    &none
+&trans         &none  &trans  &trans  &trans  &trans  &kp DEL  &none                                    &trans
             >;
         };
 
