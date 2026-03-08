@@ -40,7 +40,7 @@
 
         tri_layer {
             if-layers = <2 3>;
-            then-layer = <4>;
+            then-layer = <4>;   
         };
     };
 };
@@ -126,10 +126,10 @@
             sensor-bindings = <&scroll_down_up>;
             bindings = <
 &kp ESC    &kp N1      &kp N2      &kp N3      &kp N4                   &kp N5                             &kp KP_N7     &kp KP_N8  &kp KP_N9   &kp KP_DIVIDE                           &kp N6      &kp N7  &kp N8     &kp N9   &kp N0    &kp MINUS
-&kp TAB    &kp Q       &kp W       &kp E       &kp R                    &kp T                              &kp KP_N4     &kp KP_N5  &kp KP_N6   &kp KP_MULTIPLY                         &kp Y       &kp U   &kp I      &kp O    &kp P     &kp AT_SIGN
-&none      &kp A       &kp S       &kp D       &kp F                    &kp G            &kp CARET         &kp KP_N1     &kp KP_N2  &kp KP_N3   &kp KP_MINUS       &kp INTERNATIONAL_3  &kp H       &kp J   &kp K      &kp L    &kp SEMI  &kp SQT
-&kp LSHFT  &kp Z       &kp X       &kp C       &kp V                    &kp B            &kp LEFT_BRACKET  &kp KP_ENTER  &kp KP_N0  &kp KP_DOT  &kp KP_PLUS        &kp RIGHT_BRACKET    &kp N       &kp M   &kp COMMA  &kp DOT  &kp FSLH  &kp BACKSLASH
-&kp LCTRL              &kp C_MUTE  &kp LWIN    &mt LEFT_ALT LANGUAGE_1  &lt LOWER SPACE  &lt RAISE LANG2                                                           &lt LOWER BACKSPACE  &kp RETURN                                        &td1
+&kp TAB    &kp Q       &kp W       &kp E       &kp R                    &kp T                              &kp KP_N4     &kp KP_N5  &kp KP_N6   &kp KP_MULTIPLY                         &kp Y       &kp U   &kp I      &kp O    &kp P     &kp LEFT_BRACKET
+&none      &kp A       &kp S       &kp D       &kp F                    &kp G            &kp EQUAL         &kp KP_N1     &kp KP_N2  &kp KP_N3   &kp KP_MINUS       &kp INTERNATIONAL_3  &kp H       &kp J   &kp K      &kp L    &kp SEMI  &kp SQT
+&kp LSHFT  &kp Z       &kp X       &kp C       &kp V                    &kp B            &kp RIGHT_BRACKET &kp KP_ENTER  &kp KP_N0  &kp KP_DOT  &kp KP_PLUS        &kp BACKSLASH        &kp N       &kp M   &kp COMMA  &kp DOT  &kp FSLH  &kp INTERNATIONAL_1
+&kp LCTRL              &kp C_MUTE  &kp LWIN    &mt LEFT_ALT LANG2       &lt RAISE SPACE  &lt LOWER LANG1                                                           &lt LOWER BACKSPACE  &kp RETURN                                        &td1
             >;
         };
 
@@ -137,11 +137,11 @@
             display-name = "Mouse";
             sensor-bindings = <&scroll_down_up>;
             bindings = <
-&to_layer_0 ESC             &to_layer_0 N1  &to_layer_0 N2  &to_layer_0 N3  &to_layer_0 N4      &to_layer_0 N5            &trans  &trans  &trans  &trans             &to_layer_0 N6  &to_layer_0 N7  &to_layer_0 N8  &to_layer_0 N9   &to_layer_0 N0     &to_layer_0 MINUS
-&to_layer_0 TAB             &to_layer_0 Q   &to_layer_0 W   &to_layer_0 E   &to_layer_0 R       &to_layer_0 T             &trans  &trans  &trans  &trans             &to_layer_0 Y   &to_layer_0 U   &to_layer_0 I   &to_layer_0 O    &to_layer_0 P      &to_layer_0 EQUAL
-&none                       &to_layer_0 A   &mkp MCLK       &mkp RCLK       &mkp_exit_AML LCLK  &none           &none     &trans  &trans  &trans  &trans     &none   &none           &mkp LCLK       &mkp RCLK       &mkp MCLK        &mo SCROLL         &to_layer_0 SEMICOLON
-&to_layer_0 LSHIFT          &to_layer_0 Z   &mkp MB4        &mkp MB5        &none               &none           &none     &trans  &trans  &trans  &trans     &none   &none           &none           &mkp MB4        &mkp MB5         &none              &lt SCROLL BACKSLASH
-&mo SCROLL                                  &trans          &trans          &trans              &trans          &trans                                       &trans  &trans                                                                              &trans
+&trans      &to_layer_0 N1  &to_layer_0 N2  &to_layer_0 N3  &to_layer_0 N4      &to_layer_0 N5            &trans  &trans  &trans  &trans             &to_layer_0 N6  &to_layer_0 N7  &to_layer_0 N8  &to_layer_0 N9   &to_layer_0 N0     &to_layer_0 MINUS
+&trans      &to_layer_0 Q   &to_layer_0 W   &to_layer_0 E   &to_layer_0 R       &to_layer_0 T             &trans  &trans  &trans  &trans             &to_layer_0 Y   &to_layer_0 U   &to_layer_0 I   &to_layer_0 O    &to_layer_0 P      &to_layer_0 EQUAL
+&trans      &to_layer_0 A   &mkp MCLK       &mkp RCLK       &mkp_exit_AML LCLK  &none           &none     &trans  &trans  &trans  &trans     &none   &none           &mkp LCLK       &mkp RCLK       &mkp MCLK        &mo SCROLL         &to_layer_0 SEMICOLON
+&trans      &to_layer_0 Z   &mkp MB4        &mkp MB5        &none               &none           &none     &trans  &trans  &trans  &trans     &none   &none           &none           &mkp MB4        &mkp MB5         &none              &lt SCROLL BACKSLASH
+&trans                      &trans          &trans          &trans              &trans          &trans                                       &trans  &trans                                                                              &trans
             >;
         };
 
@@ -177,7 +177,7 @@
 &trans  &none         &none         &none         &none         &none                   &trans  &trans  &trans  &trans              &bt BT_CLR      &none    &none    &none  &none  &none
 &trans  &none         &none         &none         &none         &none         &none     &trans  &trans  &trans  &trans    &ind_bat  &out OUT_TOG    &none    &none    &none  &none  &none
 &trans  &none         &none         &none         &none         &none         &none     &trans  &trans  &trans  &trans    &ind_con  &studio_unlock  &none    &none    &none  &none  &none
-&trans                &kp C_MUTE    &trans        &trans        &trans        &trans                                      &kp DEL    &kp RETURN                                     &trans
+&trans                &kp C_MUTE    &trans        &trans        &trans        &trans                                      &kp DEL   &kp RETURN                                      &trans
             >;
         };
 
