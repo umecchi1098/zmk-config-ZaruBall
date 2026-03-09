@@ -83,6 +83,7 @@
 
             display-name = "SandS";
         };
+
     };
 };
 
@@ -137,11 +138,11 @@
             display-name = "Mouse";
             sensor-bindings = <&scroll_down_up>;
             bindings = <
-&trans      &to_layer_0 N1  &to_layer_0 N2  &to_layer_0 N3  &to_layer_0 N4      &to_layer_0 N5            &trans  &trans  &trans  &trans             &to_layer_0 N6  &to_layer_0 N7  &to_layer_0 N8  &to_layer_0 N9   &to_layer_0 N0     &to_layer_0 MINUS
-&trans      &to_layer_0 Q   &to_layer_0 W   &to_layer_0 E   &to_layer_0 R       &to_layer_0 T             &trans  &trans  &trans  &trans             &to_layer_0 Y   &to_layer_0 U   &to_layer_0 I   &to_layer_0 O    &to_layer_0 P      &to_layer_0 EQUAL
-&trans      &to_layer_0 A   &mkp MCLK       &mkp RCLK       &mkp_exit_AML LCLK  &none           &none     &trans  &trans  &trans  &trans     &none   &none           &mkp LCLK       &mkp RCLK       &mkp MCLK        &mo SCROLL         &to_layer_0 SEMICOLON
-&trans      &to_layer_0 Z   &mkp MB4        &mkp MB5        &none               &none           &none     &trans  &trans  &trans  &trans     &none   &none           &none           &mkp MB4        &mkp MB5         &none              &lt SCROLL BACKSLASH
-&trans                      &trans          &trans          &trans              &trans          &trans                                       &trans  &trans                                                                              &trans
+&trans      &trans          &trans          &trans          &trans              &trans                    &trans  &trans  &trans  &trans                     &trans          &trans          &trans           &trans             &trans             &trans
+&trans      &trans          &trans          &trans          &trans              &trans                    &trans  &trans  &trans  &trans                     &trans          &trans          &trans           &trans             &trans             &trans
+&trans      &trans          &trans          &trans          &trans              &trans          &trans    &trans  &trans  &trans  &trans     &trans          &trans          &mkp LCLK       &mkp RCLK        &mkp MCLK          &mo SCROLL         &trans
+&trans      &trans          &trans          &trans          &trans              &trans          &trans    &trans  &trans  &trans  &trans     &trans          &trans          &trans          &mkp MB4         &mkp MB5           &trans             &trans
+&trans                      &trans          &trans          &trans              &trans          &trans                                       &trans          &trans                                                                                 &trans
             >;
         };
 
