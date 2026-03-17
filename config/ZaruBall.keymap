@@ -121,7 +121,7 @@
 / {
     keymap {
         compatible = "zmk,keymap";
-
+  
         base_layer {
             display-name = "Base";
             sensor-bindings = <&scroll_down_up>;
