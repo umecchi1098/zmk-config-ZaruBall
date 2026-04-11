@@ -13,8 +13,8 @@
 #define MOUSE    1
 #define LOWER    2
 #define RAISE    3
-#define ADJUST   4
-#define SCROLL   2
+#define SCROLL   4
+#define ADJUST   5
 
 // OS設定を日本語キーボードのまま使用するための変換定義
 #define JP_DQUOTE       AT                // "
@@ -85,8 +85,8 @@
         compatible = "zmk,conditional-layers";
 
         tri_layer {
-            if-layers = <2 3>;
-            then-layer = <4>;   
+            if-layers = <LOWER RAISE>;
+            then-layer = <ADJUST>;
         };
     };
 };
@@ -213,6 +213,21 @@
 &trans  &none   &none   &none   &none   &none   &none      &trans  &trans  &trans  &trans    &none      &kp HOME   &kp LEFT   &kp DOWN    &kp RIGHT  &kp END  &none
 &trans  &none   &none   &none   &none   &none   &none      &trans  &trans  &trans  &trans    &none      &none      &none      &none       &none      &none    &none
 &trans          &none   &trans  &trans  &trans  &trans                                       &kp DEL    &kp RETURN                                            &trans
+            >;
+        };
+
+        // SCROLL
+        // トラックボールの移動をスクロールへ変換する専用レイヤー。
+        // Mouse layer から一時的に入る想定で、補助ボタンのみを割り当てる。
+        scroll_layer {
+            display-name = "Scroll";
+            sensor-bindings = <&scroll_down_up>;
+            bindings = <
+&trans      &trans          &trans          &trans          &trans              &trans                    &trans  &trans  &trans  &trans                     &trans          &trans          &trans           &trans             &trans             &trans
+&trans      &trans          &trans          &trans          &trans              &trans                    &trans  &trans  &trans  &trans                     &trans          &trans          &trans           &trans             &trans             &trans
+&trans      &trans          &trans          &trans          &trans              &trans          &trans    &trans  &trans  &trans  &trans     &trans          &trans          &mkp MB4        &trans            &mkp MB5           &trans             &trans
+&trans      &trans          &trans          &trans          &trans              &trans          &trans    &trans  &trans  &trans  &trans     &trans          &trans          &trans          &trans            &trans             &trans             &trans
+&trans                      &trans          &trans          &trans              &trans          &trans                                       &trans          &trans                                                                                 &trans
             >;
         };
 
