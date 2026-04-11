@@ -44,10 +44,15 @@
 // スクロール量の設定
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 100
 
+// Trackball listener:
+// - 座標変換
+// - Auto Mouse Layer(AML) への一時遷移
+// 打鍵振動による微小移動で AML へ誤遷移しやすかったため、
+// 単純な zip_temp_layer ではなく専用の auto_mouse_layer を使う。
 &trackball_listener {
     input-processors =  <
                          &zip_xy_transform (INPUT_TRANSFORM_XY_SWAP | INPUT_TRANSFORM_Y_INVERT | INPUT_TRANSFORM_X_INVERT)
-                         &zip_temp_layer MOUSE 500
+                         &auto_mouse_layer MOUSE 500
                         >;
     scroller {
         layers = <SCROLL>;
@@ -60,6 +65,22 @@
 };
 
 / {
+    // AML の誤爆対策:
+    // - require-prior-idle-ms:
+    //   直前にキー入力があった場合は AML に入らない
+    // - excluded-positions:
+    //   AML 中でも通常キー入力が来たら即座に抜ける
+    //   Mouse layer 上の実マウス操作キーのみ維持対象にする
+    /omit-if-no-ref/ auto_mouse_layer: auto_mouse_layer {
+        compatible = "zmk,input-processor-temp-layer";
+        #input-processor-cells = <2>;
+        // 打鍵直後の微振動では AML に入らないようにする。
+        require-prior-idle-ms = <200>;
+        // AML 中でも、通常キーを押したらすぐ抜ける。
+        // Mouse layer 上の実マウス操作キーだけは維持対象にする。
+        excluded-positions = <45 46 47 48>;
+    };
+
     conditional_layers {
         compatible = "zmk,conditional-layers";
 
@@ -166,7 +187,7 @@
 &trans      &trans          &trans          &trans          &trans              &trans                    &trans  &trans  &trans  &trans                     &trans          &trans          &trans           &trans             &trans             &trans
 &trans      &trans          &trans          &trans          &trans              &trans                    &trans  &trans  &trans  &trans                     &trans          &trans          &trans           &trans             &trans             &trans
 &trans      &trans          &trans          &trans          &trans              &trans          &trans    &trans  &trans  &trans  &trans     &trans          &trans          &mkp LCLK       &mkp RCLK        &mkp MCLK          &mo SCROLL         &trans
-&trans      &trans          &trans          &trans          &trans              &trans          &trans    &trans  &trans  &trans  &trans     &trans          &trans          &trans          &mkp MB4         &mkp MB5           &trans             &trans
+&trans      &trans          &trans          &trans          &trans              &trans          &trans    &trans  &trans  &trans  &trans     &trans          &trans          &trans          &trans           &trans             &trans             &trans
 &trans                      &trans          &trans          &trans              &trans          &trans                                       &trans          &trans                                                                                 &trans
             >;
         };
